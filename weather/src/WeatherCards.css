@@ -8,23 +8,22 @@ body {
 }
 
 .cardContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  display: grid;
+  place-items: center;
   height: 100vh; /* Ajustado para ocupar la altura completa de la pantalla */
 }
 
 .weatherCard {
   width: 60%;
-  height: 42%;
+  height: 43%;
   margin: 5%;
   padding: 5%;
   border-radius: 5px solid rgba(128, 128, 128, 0.68);
   transition: transform 0.2s;
   position: absolute;
-  top: 42%; /* Centrar verticalmente */
+  top: 20%; /* Ajustado para quedar arriba del sol */
   left: 45%; /* Centrar horizontalmente */
-  transform: translate(-50%, -50%); /* Centrar respecto al 50% de la anchura y altura */
+  transform: translateX(-50%); /* Centrar respecto al 50% de la anchura */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +45,7 @@ body {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  margin-top: 20px;
+  margin-top: 5vh; /* Ajustado a unidades relativas */
 }
 
 .buttonStyle:hover {
@@ -54,8 +53,14 @@ body {
 }
 
 @media screen and (max-width: 600px) {
+  .cardContainer {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+  }
+
   .weatherCard {
     width: 80%;
-    top: 40%; /* Ajuste para centrar en dispositivos móviles */
+    top: 15%; /* Ajuste para centrar en dispositivos móviles */
+    height: 60%;
   }
 }
