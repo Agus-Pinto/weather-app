@@ -1,14 +1,17 @@
-/* WeatherCards.css */
+* {
+  box-sizing: border-box;
+}
 
-*{
-  overflow: hidden;
+body {
+  margin: 0;
+  overflow: hidden; /* Para ocultar el desbordamiento en toda la página */
 }
 
 .cardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh; /* Ajustado para ocupar la altura completa de la pantalla */
 }
 
 .weatherCard {
@@ -19,8 +22,9 @@
   border-radius: 5px solid rgba(128, 128, 128, 0.68);
   transition: transform 0.2s;
   position: absolute;
-  top: 15%;
-  margin-left: 10%;
+  top: 42%; /* Centrar verticalmente */
+  left: 45%; /* Centrar horizontalmente */
+  transform: translate(-50%, -50%); /* Centrar respecto al 50% de la anchura y altura */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,11 +32,7 @@
   background: #0000008d !important;
   z-index: 99;
   backdrop-filter: blur(20px);
-  
-  &:hover {
-    transform: scale(1.05);
-  }
-  
+
   p {
     margin: 0;
     font-size: 14px;
@@ -53,14 +53,9 @@
   background-color: #45a049;
 }
 
-@media  screen and (max-width:600px) {
-  body{
-    overflow: hidden;
-  }
-
+@media screen and (max-width: 600px) {
   .weatherCard {
     width: 80%;
-    margin-left: 0;
-    top: 14%;
+    top: 40%; /* Ajuste para centrar en dispositivos móviles */
   }
 }
