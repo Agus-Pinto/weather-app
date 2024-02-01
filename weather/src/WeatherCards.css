@@ -15,7 +15,7 @@ body {
 
 .weatherCard {
   width: 60%;
-  height: 45%;
+  min-height: 20rem;
   margin: 5%;
   padding: 5%;
   border-radius: 5px solid rgba(128, 128, 128, 0.68);
@@ -60,7 +60,7 @@ body {
 
   .weatherCard {
     width: 80%;
-    top: 15%; /* Ajuste para centrar en dispositivos móviles */
-    height: 60%;
+    top: 21%; /* Ajuste para centrar en dispositivos móviles */
+    height: 30%;
   }
 }
