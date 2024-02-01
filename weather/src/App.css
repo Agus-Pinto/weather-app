@@ -1,38 +1,128 @@
-.App {
-  text-align: center;
+* {
+  overflow: hidden;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.container {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-family: 'Arial', sans-serif;
+  background-image: url('../src/assets/sky.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  height: 100vh;
+  max-width: 100%;
+  overflow: hidden !important;
+}
+
+.title {
+  margin-bottom: 20px;
+  color: #ffffff;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  text-shadow: #000000 2px 1px 8px;
+  letter-spacing: 5px;
+  text-transform: uppercase;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10%;
+}
+
+.input {
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 80%;
+  text-align: center;
+}
+
+.button {
+  background-color: #4caf50;
   color: white;
+  padding: 5px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 0.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+.button:hover {
+  background-color: #45a049;
 }
 
-@keyframes App-logo-spin {
+.weatherData {
+  margin-top: 20px;
+  background-color: #f5f5f523;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  max-width: 400px;
+  width: 100%;
+  height: 80%;
+  backdrop-filter: blur(30px);
+}
+
+.error {
+  color: #ff0000;
+  font-size: smaller;
+  text-shadow: 0 4px 2px rgba(0, 0, 0, 0.1);
+}
+
+.sunImg {
+  width: 300px;
+  animation: rotateSun 15s linear infinite;
+  margin-bottom: 1.5rem;
+  z-index: -1;
+}
+
+.nubeImg {
+  position: absolute;
+  width: 50vw;
+  top: 2vw;
+  animation: slideTop 20s linear infinite;
+  opacity: 0.7;
+}
+
+.nubeImg2 {
+  position: absolute;
+  width: 50vw;
+  bottom: -5vw;
+  animation: slideBottom 25s linear infinite;
+  opacity: 0.7;
+}
+
+@keyframes rotateSun {
   from {
     transform: rotate(0deg);
   }
   to {
     transform: rotate(360deg);
+  }
+}
+
+@keyframes slideTop {
+  0% {
+    transform: translateX(-100vw);
+  }
+
+  100% {
+    transform: translateX(110vw);
+  }
+}
+
+@keyframes slideBottom {
+  0% {
+    transform: translateX(100vw);
+  }
+
+  100% {
+    transform: translateX(-100vw);
   }
 }
