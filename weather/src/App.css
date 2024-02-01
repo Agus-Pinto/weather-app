@@ -152,11 +152,13 @@ body {
   .container {
     grid-template-columns: 1fr;
     grid-template-rows: auto auto auto;
+    min-height: auto !important;
   }
 
   .weatherData {
     position: absolute;
     width: 90%;
     height: auto; /* Permitir que la altura se ajuste automáticamente */
+    top: 0;
   }
 }
