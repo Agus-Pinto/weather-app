@@ -134,12 +134,13 @@
 
   .weatherData {
     width: 80%;
+    height: 100vh;
     position: absolute;
     z-index: 1;
   }
 
   .form {
-    margin-top: 20%;
+    margin-top: 50%;
     font-size: 1.5rem;
   }
 
@@ -154,7 +155,7 @@
 
   .weatherData {
     margin-top: 0%;
-    height: 70%;
+    height: 90%;
   }
 
   body {
