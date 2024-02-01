@@ -1,12 +1,14 @@
 /* WeatherCards.css */
 
+*{
+  overflow: hidden;
+}
+
 .cardContainer {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  border-radius: 3px solid rgba(128, 128, 128, 0.68);
-  background-color: rgba(255, 255, 255, 0.9);
+  height: 100%;
 }
 
 .weatherCard {
@@ -14,20 +16,18 @@
   height: 42%;
   margin: 5%;
   padding: 5%;
-  border: 1px solid #f6f8f65b;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 5px solid rgba(128, 128, 128, 0.68);
   transition: transform 0.2s;
   position: absolute;
   top: 15%;
   margin-left: 10%;
   display: flex;
   justify-content: center;
-  align-items: center; /* Centra verticalmente */
+  align-items: center;
   text-align: center;
-  background: #00000043 !important;
+  background: #0000008d !important;
   z-index: 99;
-  backdrop-filter: blur(80px); /* Ajusta el valor del blur según tus preferencias */
+  backdrop-filter: blur(20px);
   
   &:hover {
     transform: scale(1.05);
@@ -51,4 +51,16 @@
 
 .buttonStyle:hover {
   background-color: #45a049;
+}
+
+@media  screen and (max-width:600px) {
+  body{
+    overflow: hidden;
+  }
+
+  .weatherCard {
+    width: 80%;
+    margin-left: 0;
+    top: 16%;
+  }
 }

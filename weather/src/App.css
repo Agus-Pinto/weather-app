@@ -126,3 +126,38 @@
     transform: translateX(-100vw);
   }
 }
+
+@media screen and (max-width:600px) {
+  *{
+    overflow: hidden !important;
+  }
+
+  .weatherData {
+    width: 80%;
+    position: absolute;
+    z-index: 1;
+  }
+
+  .form {
+    margin-top: 20%;
+    font-size: 1.5rem;
+  }
+
+  .sunImg {
+    margin-bottom: 5rem;
+  }
+
+  .nubeImg , .nubeImg2 {
+    width: 140vw;
+    position: relative;
+  }
+
+  .weatherData {
+    margin-top: 0%;
+    height: 70%;
+  }
+
+  body {
+    overflow: hidden;
+  }
+}
