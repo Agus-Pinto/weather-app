@@ -130,6 +130,12 @@ body {
   }
 }
 
+.footer {
+  color: rgba(255, 255, 255, 0.652);
+  position: absolute;
+  bottom: 0%;
+}
+
 @media screen and (max-width: 600px) {
   * {
     overflow: hidden !important;

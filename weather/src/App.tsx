@@ -83,6 +83,7 @@ const App: React.FC = () => {
           <p className="error">{error ? error : 'Enter a city to get weather data.'}</p>
         )}
       </div>
+      <p className='footer'>Developed with React</p>
     </div>
   );
 };
